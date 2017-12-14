@@ -1,0 +1,48 @@
+{
+  "name": "serverless-express-webpack-babel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "www.js",
+  "scripts": {
+    "start": "node www.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/urixwd/serverless-express-webpack-babel.git"
+  },
+  "keywords": [
+    "serverless",
+    "lambda",
+    "express",
+    "webpack",
+    "babel"
+  ],
+  "author": "Uri Michaeli",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/urixwd/serverless-express-webpack-babel/issues"
+  },
+  "homepage": "https://github.com/urixwd/serverless-express-webpack-babel#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2017": "^6.24.1",
+    "eslint": "^4.11.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "serverless-http": "^1.5.2",
+    "serverless-webpack": "^4.1.0",
+    "webpack": "^3.10.0",
+    "webpack-node-externals": "^1.6.0"
+  }
+}

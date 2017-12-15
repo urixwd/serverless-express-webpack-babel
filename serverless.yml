@@ -5,7 +5,12 @@ provider:
   region: us-east-1
 functions:
   app:
-    handler: serverless.handler
+    handler: dist
     events:
       - http: ANY /
       - http: 'ANY {proxy+}'
+plugins:
+  - serverless-webpack
+custom:
+  webpackIncludeModules:
+    packagePath: './package.json'

@@ -4,6 +4,15 @@
 npm install -g serverless
 npm install
 serverless config credentials --provider aws --key YOUR_KEY --secret YOUR_SECRET
+```
+
+###On local machine
+```console
+npm start
+```
+
+###Deploy
+```console
 serverless deploy
 ```
 

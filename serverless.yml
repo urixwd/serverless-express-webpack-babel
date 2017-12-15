@@ -14,3 +14,6 @@ plugins:
 custom:
   webpackIncludeModules:
     packagePath: './package.json'
+  serverless-offline:
+    babelOptions:
+      presets: ['es2017']

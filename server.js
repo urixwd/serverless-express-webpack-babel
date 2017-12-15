@@ -9,31 +9,40 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
+// 'async' function mock
+const getUsersJSON = function getUsersJSON() {
+  return new Promise((resolve) => {
+    const users = [
+      {
+        id: 1,
+        firstName: 'Bob',
+        lastName: 'Smith',
+        email: 'bob@gmail.com',
+      },
+      {
+        id: 2,
+        firstName: 'Tammy',
+        lastName: 'Norton',
+        email: 'tnorton@yahoo.com',
+      },
+      {
+        id: 3,
+        firstName: 'Tina',
+        lastName: 'Lee',
+        email: 'lee.tina@hotmail.com, ',
+      },
+    ];
+    resolve(users);
+  });
+};
+
 /*
  * GET /users route to retrieve all the users.
  * EXAMPLE
  */
-app.get('/users', (req, res) => {
-  res.json([
-    {
-      id: 1,
-      firstName: 'Bob',
-      lastName: 'Smith',
-      email: 'bob@gmail.com',
-    },
-    {
-      id: 2,
-      firstName: 'Tammy',
-      lastName: 'Norton',
-      email: 'tnorton@yahoo.com',
-    },
-    {
-      id: 3,
-      firstName: 'Tina',
-      lastName: 'Lee',
-      email: 'lee.tina@hotmail.com, ',
-    },
-  ]);
+app.get('/users', async (req, res) => {
+  const users = await getUsersJSON();
+  res.json(users);
 });
 
 /*

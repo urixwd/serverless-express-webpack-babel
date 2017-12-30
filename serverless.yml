@@ -16,4 +16,4 @@ custom:
     packagePath: './package.json'
   serverless-offline:
     babelOptions:
-      presets: ['es2017']
+      presets: ['env']
